@@ -28,10 +28,15 @@ class login extends Component {
             errors: {},
         };
     }
-    componentWillReceiveProps(nextProps) {
+    static getDerivedStateFromProps(nextProps, prevState) {
         if (nextProps.UI.errors) {
+            return { errors: nextProps.UI.errors };
+        } else return null;
+    }
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.UI?.errors) {
             this.setState({
-                errors: nextProps.UI.errors,
+                errors: prevState.UI.errors,
             });
         }
     }

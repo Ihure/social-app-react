@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://us-central1-socialape-a592f.cloudfunctions.net/api"
+  "proxy": "https://us-central1-socialape-a592f.cloudfunctions.net/api",
+  "devDependencies": {
+    "eslint-plugin-react": "^7.20.6"
+  }
 }
